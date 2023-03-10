@@ -10,7 +10,7 @@
 ### Installation
 
 ```
-$ yarn add -D @stratosnet/contracts
+$ yarn add -D @stratos-network/contracts
 ```
 
 
@@ -21,7 +21,7 @@ Once installed, you can use the contracts in the library by importing them:
 ```solidity
 pragma solidity ^0.8.0;
 
-import "@stratosnet/contracts/utils/Bech32.sol";
+import "@stratos-network/contracts/utils/Bech32.sol";
 
 contract MyStratosAddress {
     using Bech32 for address;

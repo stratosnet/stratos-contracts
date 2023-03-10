@@ -1,0 +1,56 @@
+{
+  "name": "@stratosnet/contracts",
+  "version": "1.0.0",
+  "description": "Stratos Contracts is a library for stos smart contract development",
+  "main": "index.js",
+  "files": [
+    "**/*.sol",
+    "/build/contracts/*.json",
+    "!/contracts/mocks/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf build && mkdir -p build && hh compile && cp -r contracts build/contracts && cp -r artifacts/contracts build/contracts/build && cp LICENSE README.md package.json build && find ./build -name '*.dbg.json' -delete"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratosnet/stratos-contracts.git"
+  },
+  "author": "BoThe1K <bohdan@thestratos.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stratosnet/stratos-contracts/issues"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "libraries",
+    "stratos"
+  ],
+  "homepage": "https://github.com/stratosnet/stratos-contracts#readme",
+  "devDependencies": {
+    "@ethersproject/abi": "^5.4.7",
+    "@ethersproject/providers": "^5.4.7",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=12.0.0",
+    "chai": "^4.2.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.11.1",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.1.0",
+    "typescript": ">=4.5.0"
+  }
+}

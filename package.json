@@ -1,16 +1,18 @@
 {
   "name": "@the-stratos-network/contracts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stratos Contracts is a library for stos smart contract development",
   "main": "index.js",
   "files": [
     "**/*.sol",
     "/build/contracts/*.json",
-    "!/contracts/mocks/**/*"
+    "!/mocks/**/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && mkdir -p build && hh compile && cp -r contracts build/contracts && cp -r artifacts/contracts build/contracts/build && cp LICENSE README.md package.json build && find ./build -name '*.dbg.json' -delete"
+    "test": "hardhat test",
+    "clean": "hardhat clean",
+    "endclean": "find ./build -type d -name mocks -exec rm -r {} + && find ./build -name '*.dbg.json' -delete",
+    "build": "rm -rf build && mkdir -p build && hh compile && cp -r contracts/* build/ && cp -r artifacts/contracts build/build && cp LICENSE README.md package.json build && yarn endclean"
   },
   "repository": {
     "type": "git",

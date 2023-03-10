@@ -34,4 +34,4 @@ contract MyStratosAddress {
 
 ## License
 
-OpenZeppelin Contracts is released under the [MIT License](LICENSE).
+Stratos Contracts is released under the [MIT License](LICENSE).
